@@ -7,6 +7,7 @@ import {
 import Home from './view/Home';
 import Profile from './view/Profile';
 import SignInEmail from './view/SignInEmail'
+import SignInIDP from './view/SignInIDP'
 
 export default function AppRouter() {
   return (
@@ -20,6 +21,9 @@ export default function AppRouter() {
         </Route>
         <Route path="/login/email">
           <SignInEmail />
+        </Route>
+        <Route path="/login/idp">
+          <SignInIDP />
         </Route>
       </Switch>
     </Router>

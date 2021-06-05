@@ -16,10 +16,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:emu": "start-server-and-test emu:start 9099 start",
     "build": "react-scripts build",
-    "firebase:emu:start": "firebase emulators:start",
+    "emu:start": "firebase emulators:start --import ./emulator",
     "test": "react-scripts test",
     "test:e2e": "cypress open",
+    "test:e2e:run": "start-server-and-test start:emu 3000 'cypress run --browser chrome'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
